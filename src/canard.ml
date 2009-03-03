@@ -29,7 +29,7 @@ let start () =
               (Lwt.finalize
                   (fun () ->
                     Lwt.catch
-                      (fun () -> Handler.handler (Lwt_unix.of_unix_file_descr fd))
+                      (fun () -> Handler.handler fd)
                       (fun e -> ignore (self#global_exception_handler e); Lwt.return ()))
                   (fun () -> when_done (); Lwt.return ()))
 
