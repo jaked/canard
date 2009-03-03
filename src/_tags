@@ -1,0 +1,3 @@
+<*.ml*> : pkg_netplex,pkg_lwt-equeue
+
+<*.native> : pkg_netplex,pkg_lwt-equeue
